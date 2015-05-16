@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>zttc.itat.user</groupId>
+    <artifactId>user-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../user-parent/pom.xml</relativePath>
+  </parent>
+  <artifactId>user-web</artifactId>
+  <packaging>war</packaging>
+  <name>user-web Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+    <dependency>
+		<groupId>org.mortbay.jetty</groupId>
+		<artifactId>servlet-api</artifactId>
+    </dependency>
+    <dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>user-service</artifactId>
+	</dependency>
+  </dependencies>
+  <build>
+    <finalName>user-web</finalName>
+    <plugins>
+    	<plugin>
+    		<groupId>org.mortbay.jetty</groupId>
+			<artifactId>jetty-maven-plugin</artifactId>
+    	</plugin>
+    </plugins>
+  </build>
+</project>
